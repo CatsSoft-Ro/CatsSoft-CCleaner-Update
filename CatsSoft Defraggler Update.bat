@@ -75,6 +75,10 @@ cls
 :: void uninstall();
 :: /*************************************************************************************/
 :uninstall
+    Title CatsSoft-Uninstall-Defraggler
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -84,14 +88,20 @@ cls
       if exist "%ProgramFiles%\Defraggler\Defraggler.exe" (
         taskkill /F /IM "Defraggler.exe"
         start /d "%ProgramFiles%\Defraggler" uninst.exe /S
-        echo Uninstall Done.
+        echo Defraggler has been sucessfully uninstall.
+        goto close_uninstaller
+      ) else (
+        echo Defraggler was failed uninstall.
         goto close_uninstaller
       )
     ) else (
       if exist "%ProgramFiles%\Defraggler\Defraggler64.exe" (
         taskkill /F /IM "Defraggler64.exe"
         start /d "%ProgramFiles%\Defraggler" uninst.exe /S
-        echo Uninstall Done.
+        echo Defraggler has been sucessfully uninstall.
+        goto close_uninstaller
+      ) else (
+        echo Defraggler was failed uninstall.
         goto close_uninstaller
       )
     )
@@ -111,7 +121,7 @@ cls
 :: /*************************************************************************************/
 :Download
     @cls
-    Title CatsSoft-CCleaner-Downloader
+    Title CatsSoft-Download-Defraggler
     color 0B
     mode con:cols=90 lines=26
     @cls
@@ -119,9 +129,9 @@ cls
     echo.      ===  Welcome to main menu! ===   
     echo.    -----------------------------------
     echo.                                       
-    echo.    [1] Type "1" and download CCleaner standard version.
+    echo.    [1] Type "1" and download Defraggler standard version.
     echo.
-    echo.    [2] Type "2" and download CCleaner portable version. 
+    echo.    [2] Type "2" and download Defraggler portable version. 
     echo.
     echo.    [0] Type "0" and close this tool.
     echo.
@@ -154,6 +164,11 @@ cls
 :: void Standard();
 :: /*************************************************************************************/
 :Standard
+    @cls
+    Title CatsSoft-Download-Defraggler-Standard-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -255,13 +270,13 @@ cls
        if exist "%ProgramFiles%\Defraggler\Defraggler.exe" (
          echo Defraggler has been successfully installed!
        ) else ( 
-         echo Defraggler installation was failed!
+         echo Defraggler has been sucessfully install!
        )
      ) else (
         if exist "%ProgramFiles%\Defraggler\Defraggler64.exe" (
          echo Defraggler has been successfully installed!
        ) else ( 
-         echo Defraggler installation was failed!
+         echo Defraggler was faild install!
        )
      )
     )
@@ -281,6 +296,11 @@ cls
 :: void portable();
 :: /*************************************************************************************/
 :portable
+    @cls
+    Title CatsSoft-Download-Defraggler-Portable-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -383,13 +403,13 @@ cls
        if exist "%installdir%\Defraggler.exe" (
          echo Defraggler has been successfully installed!
        ) else ( 
-         echo Defraggler installation was failed!
+         echo Defraggler has been sucessfully install!
        )
      ) else (
         if exist "%installdir%\Defraggler64.exe" (
          echo Defraggler has been successfully installed!
        ) else ( 
-         echo Defraggler installation was failed!
+         echo Defraggler was failed install!
        )
      )
     REM echo.
@@ -408,7 +428,7 @@ cls
 :: /*************************************************************************************/
 :AutoDefrag
     @cls
-    Title CatsSoft-Defraggler
+    Title CatsSoft-Defrag-Disk-With-Defraggler
     color 0B
     mode con:cols=90 lines=26
     @cls

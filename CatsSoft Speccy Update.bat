@@ -75,6 +75,11 @@ cls
 :: void uninstall();
 :: /*************************************************************************************/
 :uninstall
+    @cls
+    Title CatsSoft-Uninstall-Speccy
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -84,16 +89,21 @@ cls
       if exist "%ProgramFiles%\Speccy\Speccy.exe" (
         taskkill /F /IM "Speccy.exe"
         start /d "%ProgramFiles%\Speccy" uninst.exe /S
-        echo Uninstall Done.
+        echo Speccy has been sucessfully uninstall.
+        goto close_uninstaller
+      ) else (
+        echo Speccy was failed uninstall.
         goto close_uninstaller
       )
     ) else (
       if exist "%ProgramFiles%\Speccy\Speccy64.exe" (
         taskkill /F /IM "Speccy64.exe"
         start /d "%ProgramFiles%\Speccy" uninst.exe /S
-        echo Uninstall Done.
+        echo Speccy has been sucessfully uninstall.
         goto close_uninstaller
-      )
+      ) else (
+        echo Speccy was failed uninstall.
+        goto close_uninstaller
     )
     :close_uninstaller
     echo.
@@ -111,7 +121,7 @@ cls
 :: /*************************************************************************************/
 :Download
     @cls
-    Title CatsSoft-Speccy-Downloader
+    Title CatsSoft-Download-Speccy
     color 0B
     mode con:cols=90 lines=26
     @cls
@@ -154,6 +164,11 @@ cls
 :: void Standard();
 :: /*************************************************************************************/
 :Standard
+    @cls
+    Title CatsSoft-Download-Speccy-Standard-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -255,15 +270,15 @@ cls
      echo.
      if %processor_architecture%==x86 ( 
        if exist "%ProgramFiles%\Speccy\Speccy.exe" (
-         echo Speccy has been successfully installed!
+         echo Speccy has been successfully install!
        ) else ( 
-         echo Speccy installation was failed!
+         echo Speccy was failed install!
        )
      ) else (
         if exist "%ProgramFiles%\Speccy\Speccy64.exe" (
-         echo Speccy has been successfully installed!
+         echo Speccy has been successfully install!
        ) else ( 
-         echo Speccy installation was failed!
+         echo Speccy was failed install!
        )
      )
     )
@@ -284,6 +299,11 @@ cls
 :: void portable();
 :: /*************************************************************************************/
 :portable
+    @cls
+    Title CatsSoft-Download-Speccy-Portable-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -384,15 +404,15 @@ cls
      echo.
      if %processor_architecture%==x86 ( 
        if exist "%installdir%\Speccy.exe" (
-         echo Speccy has been successfully installed!
+         echo Speccy has been successfully install!
        ) else ( 
-         echo Speccy installation was failed!
+         echo Speccy was failed install!
        )
      ) else (
         if exist "%installdir%\Speccy64.exe" (
-         echo Speccy has been successfully installed!
+         echo Speccy has been successfully install!
        ) else ( 
-         echo Speccy installation was failed!
+         echo Speccy was failed install!
        )
      )
     REM echo.
@@ -410,6 +430,11 @@ cls
 :: void runSpeccy();
 :: /*************************************************************************************/
 :runSpeccy
+    @cls
+    Title CatsSoft-Run-Speccy
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
      echo.
      echo ---------------------------------------------------------------------------------
      echo.

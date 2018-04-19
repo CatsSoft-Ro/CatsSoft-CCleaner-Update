@@ -76,6 +76,11 @@ cls
 :: void uninstall();
 :: /*************************************************************************************/
 :uninstall
+    @cls
+    Title CatsSoft-Uninstall-CCleaner
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -86,7 +91,10 @@ cls
         taskkill /F /IM "CCleaner.exe"
         taskkill /F /IM "CCUpdate.exe"
         start /d "%ProgramFiles%\CCleaner" uninst.exe /S
-        echo Uninstall Done.
+        echo CCleaner has been sucessfully Uninstall.
+        goto close_uninstaller
+       ) else (
+        echo CCleaner was failed Uninstall.
         goto close_uninstaller
        )
     ) else (
@@ -94,7 +102,10 @@ cls
         taskkill /F /IM "CCleaner64.exe"
         taskkill /F /IM "CCUpdate.exe"
         start /d "%ProgramFiles%\CCleaner" uninst.exe /S
-        echo Uninstall Done.
+        echo CCleaner has been sucessfully Uninstall.
+        goto close_uninstaller
+       ) else (
+        echo CCleaner was failed Uninstall.
         goto close_uninstaller
        )
     )
@@ -114,7 +125,7 @@ cls
 :: /*************************************************************************************/
 :Download
     @cls
-    Title CatsSoft-CCleaner-Downloader
+    Title CatsSoft-Download-CCleaner
     color 0B
     mode con:cols=90 lines=26
     @cls
@@ -157,6 +168,11 @@ cls
 :: void Standard();
 :: /*************************************************************************************/
 :Standard
+    @cls
+    Title CatsSoft-Download-CCleaner-Standard-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -255,13 +271,13 @@ cls
        if exist "%ProgramFiles%\CCleaner\CCleaner.exe" (
          echo CCleaner has been successfully installed!
        ) else ( 
-         echo CCleaner installation was failed!
+         echo CCleaner was failed install!
        )
      ) else (
         if exist "%ProgramFiles%\CCleaner\ccleaner64.exe" (
          echo CCleaner has been successfully installed!
        ) else ( 
-         echo CCleaner installation was failed!
+         echo CCleaner was failed install!
        )
      )
     )
@@ -281,7 +297,11 @@ cls
 :: void portable();
 :: /*************************************************************************************/
 :portable
-    echo.
+    @cls
+    Title CatsSoft-Download-CCleaner-Portable-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo ---------------------------------------------------------------------------------
     echo.
     cd /d "%~dp0"
@@ -381,15 +401,15 @@ cls
      echo.
      if %processor_architecture%==x86 ( 
        if exist "%installdir%\CCleaner.exe" (
-         echo CCleaner has been successfully installed!
+         echo CCleaner has been successfully install!
        ) else ( 
-         echo CCleaner installation was failed!
+         echo CCleaner was faild install!
        )
      ) else (
         if exist "%installdir%\ccleaner64.exe" (
-         echo CCleaner has been successfully installed!
+         echo CCleaner has been successfully install!
        ) else ( 
-         echo CCleaner installation was failed!
+         echo CCleaner was failed install!
        )
      )
     REM echo.
@@ -407,6 +427,11 @@ cls
 :: void autoclean();
 :: /*************************************************************************************/
 :autoclean
+    @cls
+    Title CatsSoft-AutoClean-Computer-With-CCleaner
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.

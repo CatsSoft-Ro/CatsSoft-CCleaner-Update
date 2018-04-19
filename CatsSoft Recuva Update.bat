@@ -75,6 +75,11 @@ cls
 :: void uninstall();
 :: /*************************************************************************************/
 :Uninstall
+    @cls
+    Title CatsSoft-Uninstall-Recuva
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -84,14 +89,20 @@ cls
       if exist "%ProgramFiles%\Recuva\Recuva.exe" (
         taskkill /F /IM "Recuva.exe"
         start /d "%ProgramFiles%\Recuva" uninst.exe /S
-        echo Uninstall Done.
+        echo Recuva has been sucessfully Uninstall.
+        goto close_uninstaller
+      ) else (
+        echo Recuva was failed Uninstall.
         goto close_uninstaller
       )
     ) else (
       if exist "%ProgramFiles%\Recuva\Recuva64.exe" (
         taskkill /F /IM "Recuva64.exe"
         start /d "%ProgramFiles%\Recuva" uninst.exe /S
-        echo Uninstall Done.
+        echo Recuva has been sucessfully Uninstall.
+        goto close_uninstaller
+      ) else (
+        echo Recuva was failed Uninstall.
         goto close_uninstaller
       )
     )
@@ -111,7 +122,7 @@ cls
 :: /*************************************************************************************/
 :Download
     @cls
-    Title CatsSoft-Recuva-Downloader
+    Title CatsSoft-Download-Recuva
     color 0B
     mode con:cols=90 lines=26
     @cls
@@ -154,6 +165,11 @@ cls
 :: void Standard();
 :: /*************************************************************************************/
 :Standard
+    @cls
+    Title CatsSoft-Download-Recuva-Standard-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -255,15 +271,15 @@ cls
      echo.
      if %processor_architecture%==x86 ( 
        if exist "%ProgramFiles%\Recuva\Recuva.exe" (
-         echo Recuva has been successfully installed!
+         echo Recuva has been successfully install!
        ) else ( 
-         echo Recuva installation was failed!
+         echo Recuva was failed install!
        )
      ) else (
         if exist "%ProgramFiles%\Recuva\Recuva64.exe" (
-         echo Recuva has been successfully installed!
+         echo Recuva has been successfully install!
        ) else ( 
-         echo Recuva installation was failed!
+         echo Recuva was failed install!
        )
      )
     )
@@ -284,6 +300,11 @@ cls
 :: void portable();
 :: /*************************************************************************************/
 :portable
+    @cls
+    Title CatsSoft-Download-Recuva-Portable-Version
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
@@ -384,15 +405,15 @@ cls
      echo.
      if %processor_architecture%==x86 ( 
        if exist "%installdir%\Recuva.exe" (
-         echo Recuva has been successfully installed!
+         echo Recuva has been successfully install!
        ) else ( 
-         echo Recuva installation was failed!
+         echo Recuva was failed install!
        )
      ) else (
         if exist "%installdir%\Recuva64.exe" (
-         echo Recuva has been successfully installed!
+         echo Recuva has been successfully install!
        ) else ( 
-         echo Recuva installation was failed!
+         echo Recuva was failed install!
        )
      )
     REM echo.
@@ -410,6 +431,11 @@ cls
 :: void runrecuva();
 :: /*************************************************************************************/
 :runrecuva
+    @cls
+    Title CatsSoft-Run-Recuva
+    color 0B
+    mode con:cols=90 lines=26
+    @cls
      echo.
      echo ---------------------------------------------------------------------------------
      echo.
