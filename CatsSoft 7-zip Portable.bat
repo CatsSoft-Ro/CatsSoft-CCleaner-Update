@@ -24,10 +24,10 @@ if exist "%BinDir%" (
     echo.
 
     if %processor_architecture%==x86 ( 
-      bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1801.msi" "%~dp07z1801.msi"
+      bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1805.msi" "%~dp07z1805.msi"
       echo.
     ) else (
-      bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1801-x64.msi" "%~dp07z1801-x64.msi"
+      bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1805-x64.msi" "%~dp07z1805-x64.msi"
       echo.
     )
     for /f "skip=1 eol=: delims=" %%F in ('dir /b /o-d "%~dp07z*.msi"') do @del "%%F"

@@ -63,7 +63,9 @@ goto :eof
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
-    echo.Press any key to return to the menu. . .
+    echo	=== Press any key to return to the menu ===
+    echo.
+    echo ---------------------------------------------------------------------------------
     echo.
     pause>nul
     goto menu
@@ -113,7 +115,9 @@ cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
-    echo.Press any key to return to the menu. . .
+    echo	=== Press any key to return to the menu ===
+    echo.
+    echo ---------------------------------------------------------------------------------
     echo.
     pause>nul
     goto menu
@@ -155,7 +159,9 @@ cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
-    echo.Press any key to return to the menu. . .
+    echo	=== Press any key to return to the menu ===
+    echo.
+    echo ---------------------------------------------------------------------------------
     echo.
     pause>nul
     goto Download
@@ -286,7 +292,9 @@ cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
-    echo.Press any key to return to the menu. . .
+    echo	=== Press any key to return to the menu ===
+    echo.
+    echo ---------------------------------------------------------------------------------
     echo.
     pause>nul
     goto menu
@@ -318,14 +326,14 @@ cls
       if exist "%~dp0bin\7-zip\7z.exe" (
         goto :next
       ) else (
-        bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1801.msi" "%~dp07z1801.msi"
+        bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1805.msi" "%~dp07z1805.msi"
         goto :next
       )
     ) else (
       if exist "%~dp0bin\7-zip\7z.exe" (
         goto :next
       ) else (
-        bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1801-x64.msi" "%~dp07z1801-x64.msi"
+        bitsadmin /transfer wcb /priority high "https://www.7-zip.org/a/7z1805-x64.msi" "%~dp07z1805-x64.msi"
         goto :next
       )
     )
@@ -416,7 +424,9 @@ cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
-    echo.Press any key to return to the menu. . .
+    echo	=== Press any key to return to the menu ===
+    echo.
+    echo ---------------------------------------------------------------------------------
     echo.
     pause>nul
     goto menu
@@ -457,7 +467,9 @@ cls
     echo.
     echo ---------------------------------------------------------------------------------
     echo.
-    echo.Press any key to return to the menu. . .
+    echo	=== Press any key to return to the menu ===
+    echo.
+    echo ---------------------------------------------------------------------------------
     echo.
     pause>nul
     goto menu
